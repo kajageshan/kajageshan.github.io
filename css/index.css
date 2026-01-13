@@ -6,7 +6,7 @@
 }
 
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url('..photo/1.jpg');
+    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url('photo/1.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
