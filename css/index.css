@@ -705,11 +705,11 @@
 }
 
 .wa-img-1 {
-    background-image: url('..photo/6.png');
+    background-image: url('../photo/6.png');
 }
 
 .wa-img-2 {
-    background-image: url('..photo/4.jpg');
+    background-image: url('../photo/4.jpg');
 }
 
 .wa-img-3 {
