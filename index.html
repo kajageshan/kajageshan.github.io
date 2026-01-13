@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hummingbirds - Premium Hotel Booking</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description"
+        content="Experience luxury at Hummingbirds. Book your stay, enjoy premium rooms and services.">
+    <!-- Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <p>Welcome to Hummingbirds Resort</p>
+                <div class="top-bar-social">
+                    <a href="https://www.facebook.com/hummingbirdsresort" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hummingbirdsresort" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com/hummingbirdsresort" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/hummingbirdsresort" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="video-section1">
+
+                <video autoplay muted loop playsinline>
+                    <source src="images/hum.mp4" type="video/mp4">
+                </video> 
+            
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="rooms.html">Rooms</a>
+                <a href="contact.html">Contact</a>
+                <a href="terms.html">Terms</a>
+                <a href="rooms.html" class="btn btn-primary nav-btn"
+                    >Book Now</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-header">
+        <div class="container hero-content">
+            <span class="hero-subtitle">Luxury Living</span>
+            <h1 class="hero-title">Discover A Brand Luxurious Hotel</h1>
+            <div class="hero-btns">
+                <a href="rooms.html" class="btn btn-primary nav-btn">Our Rooms</a>
+                <a href="rooms.html" class="btn btn-white">Book A Room</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Form
+    <div class="booking-area">
+        <div class="container">
+            <div class="booking-form">
+                <form>
+                    <div class="form-group">
+                        <label>Check In</label>
+                        <input type="date" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Check Out</label>
+                        <input type="date" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Adults</label>
+                        <select class="form-select">
+                            <option selected>1 Adult</option>
+                            <option>2 Adults</option>
+                            <option>3 Adults</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Children</label>
+                        <select class="form-select">
+                            <option selected>0 Child</option>
+                            <option>1 Child</option>
+                            <option>2 Children</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary nav-btn" id="Explore">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h6>About Us</h6>
+                <h1>Welcome to <span>Humming Birds Suite!</span></h1>
+                <p>Located in the heart of Jaffna, our hotel combines comfort, style, and relaxation.
+                    With well-furnished rooms, a calm atmosphere, and essentials like free high-speed WiFi,
+                    24-hour check-in, and dedicated guest support, we ensure a smooth, hassle-free stay.<br><br>
+
+                    Whether you’re visiting Jaffna for business,
+                    family, or leisure, our hotel delivers a memorable stay through premium service and warm
+                    hospitality.
+                    We focus on cleanliness, comfort, and personalized care to ensure
+                    you feel welcome and at home throughout your visit.</p>
+
+                <div class="about-features">
+                    <div class="row">
+                        <div class="col-6 mb-2">
+                            <i class="fa fa-check text-primary me-2"></i> Relax Living
+                        </div>
+                        <div class="col-6 mb-2">
+                            <i class="fa fa-check text-primary me-2"></i> High Security
+                        </div>
+                        <div class="col-6 mb-2">
+                            <i class="fa fa-check text-primary me-2"></i> Private Beach
+                        </div>
+                        <div class="col-6 mb-2">
+                            <i class="fa fa-check text-primary me-2"></i> 24/7 Support
+                        </div>
+                    </div>
+                </div>
+                <a href="about.html" class="btn btn-primary nav-btn" id="Explore">Explore More</a>
+            </div>
+            <div class="about-images">
+                <img class="about-img" src="images/photo/2.jpg" alt="Hotel Interior">
+                <img class="about-img" src="images/photo/3.jpg" alt="Resort Pool">
+                <img class="about-img large" src="images/photo/5.jpg" alt="Luxury Room">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="highlight-rooms">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title">Our Rooms</span>
+                <h1>Explore Our <span style="color: var(--primary);">Rooms</span></h1>
+            </div>
+            <div class="room-grid">
+                <!-- Room 1 -->
+                <div class="room-item">
+                    <div class="room-img">
+                        <img src="images/room/103/11.jpeg" alt="Junior Suite">
+                        <span class="room-price">$100/Night</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Spacious Family Rooms</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1 Bath</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-play"></i> TV</span>
+                        </div>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet
+                            lorem.</p>
+                        <div class="room-btns">
+                            <a href="rooms.html" class="btn-book-now">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-item">
+                    <div class="room-img">
+                        <img src="images/room/202/7.jpeg" alt="Executive Suite">
+                        <span class="room-price">$150/Night</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Premium Rooms</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> Cool Bath</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-play"></i> TV</span>
+                        </div>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet
+                            lorem.</p>
+                        <div class="room-btns">
+                            <a href="rooms.html" class="btn-book-now">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-item">
+                    <div class="room-img">
+                        <img src="images/room/102/11.jpeg" alt="Super Deluxe">
+                        <span class="room-price">$200/Night</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Single Bed Rooms</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 1 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 2 Bath</span>
+                            <span class="facility"><i class="fa fa-play"></i> TV</span>
+                        </div>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet
+                            lorem.</p>
+                        <div class="room-btns">
+                            <a href="rooms.html" class="btn-book-now">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 4 -->
+                <div class="room-item">
+                    <div class="room-img">
+                        <img src="images/room/104/4.jpeg" alt="Family Suite">
+                        <span class="room-price">$250/Night</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Double Bed Rooms</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-table"></i> Dressing table </span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-play"></i> TV</span>
+                        </div>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet
+                            lorem.</p>
+                        <div class="room-btns">
+                            <a href="rooms.html" class="btn-book-now">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 5 -->
+                <div class="room-item">
+                    <div class="room-img">
+                        <img src="images/room/204/8.jpeg" alt="Presidential Suite">
+                        <span class="room-price">$500/Night</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Morden Rooms</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-table"></i> premium Tables</span>
+                            <span class="facility"><i class="fa fa-bath"></i> Bath</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                        </div>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet
+                            lorem.</p>
+                        <div class="room-btns">
+                            <a href="rooms.html" class="btn-book-now">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 6 -->
+                <div class="room-item">
+                    <div class="room-img">
+                        <img src="images/room/204/12.jpeg" alt="Luxury Suite">
+                        <span class="room-price">$300/Night</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Luxury Rooms</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> Bath</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-play"></i> TV</span>
+                        </div>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet
+                            lorem.</p>
+                        <div class="room-btns">
+                            <a href="rooms.html" class="btn-book-now">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <div class="video-content-left">
+                <span class="video-subtitle">LUXURY LIVING</span>
+                <div class="video-subtitle-line"></div>
+                <h1 class="video-title">Discover A Brand Luxurious Hotel</h1>
+                <p class="video-description">
+                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                </p>
+                <div class="video-buttons">
+                    <a href="rooms.html" class="btn btn-primary nav-btn">OUR ROOMS</a>
+                    <a href="rooms.html" class="btn btn-video-secondary">BOOK A ROOM</a>
+                </div>
+            </div>
+            <div class="video-content-right">
+                <div class="video-image-wrapper">
+                    <img src="images/photo/1.jpg" alt="Luxury Hotel" class="video-image">
+                    <div data-bs-toggle="modal" data-src="" class="play-btn-overlay">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+
+            <div class="section-title">
+                <span class="section-title">Our Services</span>
+                <h2>Explore Our <strong>SERVICES</strong></h2>
+            </div>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa fa-hotel"></i></div>
+                    <h3>Rooms & Apartment</h3>
+                    <p>Our rooms and apartments are designed for comfort and privacy,
+                        offering clean spaces, modern amenities, and a relaxed stay.
+                        Whether it’s a short visit or a longer stay,
+                        you get convenience without compromises.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa fa-utensils"></i></div>
+                    <h3>Food & Restaurant</h3>
+                    <p>Our restaurant serves fresh, flavorful meals prepared with quality
+                        ingredients in a comfortable dining space.
+                        From local favorites to classic dishes,
+                        every meal is made to satisfy.</p>
+                </div>
+
+
+
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa fa-swimmer"></i></div>
+                    <h3>Sports & Gaming</h3>
+                    <p>Our sports and gaming area is built for energy and entertainment,
+                         with well-maintained facilities, modern equipment,
+                          and a fun, competitive atmosphere. Whether you want to relax,
+                           challenge friends, or stay active, this is your space to play
+                            without limits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <!-- <section class="staff-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title">Our Team</span>
+                <h1>Explore Our <span style="color: var(--primary);">Staffs</span></h1>
+            </div>
+            <div class="staff-grid">
+                <div class="staff-item">
+                    <img class="staff-img"
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Staff">
+                    <div class="staff-info">
+                        <h5>Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+                <div class="staff-item">
+                    <img class="staff-img"
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Staff">
+                    <div class="staff-info">
+                        <h5>Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+                <div class="staff-item">
+                    <img class="staff-img"
+                        src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Staff">
+                    <div class="staff-info">
+                        <h5>Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+                <div class="staff-item">
+                    <img class="staff-img"
+                        src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                        alt="Staff">
+                    <div class="staff-info">
+                        <h5>Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- WhatsApp Banner -->
+    <section class="whatsapp-banner">
+        <div class="wa-strip">
+            <div class="wa-img wa-img-1"></div>
+            <div class="wa-img wa-img-3"></div>
+            <div class="wa-img wa-img-1"></div>
+            <div class="wa-img wa-img-3"></div>
+            <div class="wa-img wa-img-4"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/main logo.png" alt="Hummingbirds Logo" />
+            </div>
+            <div class="footer-about">
+                <h2>ABOUT US</h2>
+                <p>
+                    Welcome to Humming Birds Resort, a haven of comfort and culinary excellence <br>
+                    situated in the heart of Jaffna, Sri Lanka. Embrace the essence
+                    <br> of warm hospitality and savor exquisite culinary delights in a picturesque setting.
+                </p>
+                <div class="footer-social">
+                    <span class="footer-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="footer-icon"><i class="fab fa-facebook-messenger"></i></span>
+                    <span class="footer-icon"><i class="fas fa-envelope"></i></span>
+                </div>
+            </div>
+            <div class="footer-links-section">
+                <div class="footer-links-group">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Free High-Speed Wi-Fi</li>
+                        <li>24/7 Front Desk Support</li>
+                        <li>Daily Housekeeping</li>
+                        <li>TV & AC facilities</li>
+                        <li>Laundry Service</li>
+                        <li>WhatsApp Booking Button</li>
+                        <li>Photo Gallery</li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <span id="year"></span> 
+            <span class="brand">HummingBirds.lk</span> All Rights Reserved | 
+            <a href="https://webbuilders.lk" target="_blank" rel="noopener noreferrer" class="office">WEBbuilders.LK</a>
+        </div>
+        
+        
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+        
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

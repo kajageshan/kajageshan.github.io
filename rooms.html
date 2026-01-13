@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Hummingbirds Resort</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/rooms.css">
+</head>
+
+<body>
+
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <p>Welcome to Hummingbirds Resort</p>
+                <div class="top-bar-social">
+                    <a href="https://www.facebook.com/hummingbirdsresort" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hummingbirdsresort" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com/hummingbirdsresort" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/hummingbirdsresort" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="video-section1">
+
+                <video autoplay muted loop playsinline>
+                    <source src="images/hum.mp4" type="video/mp4">
+                </video> 
+            
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" >Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="rooms.html" class="active">Rooms</a>
+                <a href="contact.html">Contact</a>
+                <a href="terms.html">Terms</a>
+                <a href="rooms.html" class="btn btn-primary nav-btn"
+                    >Book Now</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Our Rooms</h1>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Rooms</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title">Luxury Living</span>
+                <h1>Explore Our <span style="color: var(--primary);">Rooms</span></h1>
+            </div>
+            <div class="room-grid">
+                <!-- Room 1 -->
+                <div class="room-item" data-page="1">
+                    <div class="room-img">
+                        <img src="images/room/101/1.jpeg"
+                            alt="Family Room (101)">
+                        <span class="room-price">$45/Night or day (AC Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Family Room</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 1 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1 Bath</span>
+                            <span class="facility"><i class="fa fa-thermometer-half"></i> AC</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-play"></i> Tv</span>
+                        </div>
+                        <p>Our Family Room offers a spacious and comfortable space for families.
+                            Designed with modern amenities and a relaxing setup, its perfect for a stress-free family stay.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=101" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-item" data-page="1">
+                    <div class="room-img">
+                        <img src="images/room/102/1.jpeg"
+                            alt="Comfort Single Room (102)">
+                        <span class="room-price">$20/Night or Day (Non AC)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Comfort Single Room</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 1 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1 Bath</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-chair"></i> Dressing table</span>
+                        </div>
+                        <p>Our Comfort Single Room offers a cozy and private space with a comfortable bed and modern amenities.
+                            Perfect for solo travelers or couples seeking a peaceful retreat.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=102" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-item" data-page="1">
+                    <div class="room-img">
+                        <img src="images/room/103/8.jpeg"
+                            alt="Deluxe Family Room (103)">
+                        <span class="room-price">$40/Night or Day (AC Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Deluxe Family Room</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1 Bath</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-play"></i> Tv</span>
+                        </div>
+                        <p>Our Deluxe Family Room provides a spacious and luxurious space for families.
+                            Designed with modern amenities and a relaxing setup, its perfect for a stress-free family stay.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=103" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Room 4 -->
+                <div class="room-item" data-page="1">
+                    <div class="room-img">
+                        <img src="images/room/104/1.jpeg"
+                            alt="Premium Family Room (104)">
+                        <span class="room-price">$45/Night or Day (AC Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Premium Family Room</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 2 Bath</span>
+                            <span class="facility"><i class="fa fa-play"></i> Tv</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                        </div>
+                        <p>Our Premium Family Room offers a luxurious and spacious space for families.
+                            Designed with modern amenities and a relaxing setup, its perfect for a stress-free family stay.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=104" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Room 5 -->
+                <div class="room-item" data-page="1">
+                    <div class="room-img">
+                        <img src="images/room/201/1.jpeg"
+                            alt="Classic Single Room (201)">
+                        <span class="room-price">$32/Night or Day (A/C Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Classic Single Room</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 1 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1Bath</span>
+                            <span class="facility"><i class="fa fa-thermometer-half"></i> A/C Room</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                        </div>
+                        <p>Our Classic Single Room offers a cozy and private space with a comfortable bed and modern amenities.
+                            Perfect for solo travelers or couples seeking a peaceful retreat.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=201" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Room 6 -->
+                <div class="room-item" data-page="1">
+                    <div class="room-img">
+                        <img src="images/room/202/1.jpeg"
+                            alt="Comfort Double Bedroom (202)">
+                        <span class="room-price">$35/Night or Day (A/C Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Comfort Double Bedroom</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1Bath</span>
+                            <span class="facility"><i class="fa fa-chair"></i> Dressing table</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                        </div>
+                        <p>Our Comfort Double Bedroom offers a cozy and private space with a comfortable bed and modern amenities.
+                            Perfect for solo travelers or couples seeking a peaceful retreat.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=202" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Room 7 - Page 2 -->
+                 <div data-page="2" class="room-item" id="room-203">
+                    <div class="room-img">
+                        <img src="images/room/203/4.jpeg"
+                            alt="Double Deluxe Room (204)">
+                        <span class="room-price">$55/Day or Night (A/C Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Double Deluxe Room</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1 Bath</span>
+                            <span class="facility"><i class="fa fa-chair"></i> Dressing table</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                        </div>
+                        <p>Our Room offers a spacious and luxurious space for families.
+                            Modern amenities and a relaxing setup, its perfect for a stress-free family stay.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=203" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Room 8 - Page 2 -->
+                <div data-page="2" class="room-item" id="room-204">
+                    <div class="room-img">
+                        <img src="images/room/204/4.jpeg"
+                            alt="Double Deluxe Room (204)">
+                        <span class="room-price">$40/Day or Night (A/C Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Double Deluxe Room</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1 Bath</span>
+                            <span class="facility"><i class="fa fa-chair"></i> Dressing table</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                        </div>
+                        <p>Our Room offers a spacious and luxurious space for families.
+                            Modern amenities and a relaxing setup, its perfect for a stress-free family stay.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=204" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Room 9 - Page 2 -->
+                <div class="room-item" data-page="2">
+                    <div class="room-img">
+                        <img src="images/room/205/1.jpg"
+                            alt="Single bedroom (205)">
+                        <span class="room-price">$35/Day or Night (A/C Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Single bedroom</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 1 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1 Bath</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-chair"></i> Dressing table</span>
+                        </div>
+                        <p>Our Single Bedroom offers a cozy and private space with a comfortable bed and modern amenities.
+                            Perfect for solo travelers or couples seeking a peaceful retreat.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=205" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Room 10 - Page 2 -->
+                <div class="room-item" data-page="2">
+                    <div class="room-img">
+                        <img src="images/room/206/1.jpg"
+                            alt="Royal Family Room (206)">
+                        <span class="room-price">$32/Day or Night (A/C Room)</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h5>Royal Family Room</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="room-facilities">
+                            <span class="facility"><i class="fa fa-bed"></i> 2 Bed</span>
+                            <span class="facility"><i class="fa fa-bath"></i> 1 Bath</span>
+                            <span class="facility"><i class="fa fa-wifi"></i> Wifi</span>
+                            <span class="facility"><i class="fa fa-thermometer-half"></i> A/C room</span>
+                        </div>
+                        <p>Our Royal Family Room offers a luxurious and spacious space for families.
+                            Designed with modern amenities and a relaxing setup, its perfect for a stress-free family stay.</p>
+                        <div class="room-btns">
+                            <a href="room-detail.html?room=206" class="btn-book-now">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                       
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination-wrapper">
+                <div class="pagination" id="roomPagination">
+                    <button class="pagination-btn" onclick="changePage(1)">1</button>
+                    <button class="pagination-btn" onclick="changePage(2)">2</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+            <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/main logo.png" alt="Hummingbirds Logo" />
+            </div>
+            <div class="footer-about">
+                <h2>ABOUT US</h2>
+                <p>
+                    Welcome to Humming Birds Resort, a haven of comfort and culinary excellence <br>
+                    situated in the heart of Jaffna, Sri Lanka. Embrace the essence <br>
+                    of warm hospitality and savor exquisite culinary delights in a picturesque setting.
+                </p>
+                <div class="footer-social">
+                    <span class="footer-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="footer-icon"><i class="fab fa-facebook-messenger"></i></span>
+                    <span class="footer-icon"><i class="fas fa-envelope"></i></span>
+                </div>
+            </div>
+            <div class="footer-links-section">
+                <div class="footer-links-group">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Free High-Speed Wi-Fi</li>
+                        <li>24/7 Front Desk Support</li>
+                        <li>Daily Housekeeping</li>
+                        <li>TV & AC facilities</li>
+                        <li>Laundry Service</li>
+                        <li>WhatsApp Booking Button</li>
+                        <li>Photo Gallery</li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> 
+                <span class="brand">HummingBirds.lk</span> All Rights Reserved | 
+                <a href="https://webbuilders.lk" target="_blank" rel="noopener noreferrer" class="office">WEBbuilders.LK</a>
+            </div>
+
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+            
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Pagination functionality
+        let currentPage = 1;
+        const roomsPerPage = 6;
+
+        function showPage(page) {
+            const rooms = document.querySelectorAll('.room-item');
+            rooms.forEach((room, index) => {
+                const roomPage = parseInt(room.getAttribute('data-page'));
+                if (roomPage === page) {
+                    room.style.display = 'block';
+                } else {
+                    room.style.display = 'none';
+                }
+            });
+            
+            // Update active button
+            const buttons = document.querySelectorAll('.pagination-btn');
+            buttons.forEach((btn, index) => {
+                if (index + 1 === page) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            showPage(page);
+            // Scroll to top of rooms section
+            document.querySelector('.rooms-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage(1);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms - Hummingbirds Resort</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/rooms.css">
+  <link rel="stylesheet" href="css/room-detail.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- BOOKING POPUP -->
+  <div id="bookingPopup" class="popup-overlay">
+    <div class="popup-box">
+      <h3>Book This Room</h3>
+
+      <label>Check-in Date</label>
+      <input type="date" id="checkin">
+
+      <label>Check-out Date</label>
+      <input type="date" id="checkout">
+
+      <div class="popup-actions">
+        <button onclick="sendToWhatsApp()">Go</button>
+        <button class="close-btn" onclick="closePopup()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <p>Welcome to Hummingbirds Resort</p>
+            <div class="top-bar-social">
+                <a href="https://www.facebook.com/hummingbirdsresort" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/hummingbirdsresort" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/hummingbirdsresort" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/hummingbirdsresort" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <div class="video-section1">
+
+            <video autoplay muted loop playsinline>
+                <source src="images/hum.mp4" type="video/mp4">
+            </video> 
+        
+        </div>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" >Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="rooms.html" class="active">Rooms</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="rooms.html" class="btn btn-primary nav-btn"
+                >Book Now</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Room Detail</h1>
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Room Detail</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="room-detail-flex">
+    <section class="room-section">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img id="roomImage" src="" alt="Room Image">
+        </div>
+        <button class="prev-btn" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next-btn" onclick="changeImage(1)">&#10095;</button>
+      </div>
+
+      <h1 id="roomTitle">Loading...</h1>
+      <p id="roomDesc"></p>
+      <p id="roomPrice"></p>
+      <ul id="roomFacilities"></ul>
+
+      <a href="" id="bookNowBtn" onclick="openPopup()" class="book-btn">
+        Book Now on WhatsApp
+      </a>
+
+      <div id="room-gallery-rel">
+        <div class="rel-title">Related Images</div>
+        <div class="rel-images">
+        </div>
+      </div>
+
+
+
+    </section>
+
+    <aside class="sidebar-rooms-outer">
+
+      <div class="box" id="servicebox">
+        <h3>Our Services</h3>
+        <ul class="services">
+          <li>Rooms & Apartment</li>
+          <li>Food & Restaurant</li>
+          <li>Spa & Fitness</li>
+          <li>Sports & Gaming</li>
+          <li>Event & Party</li>
+          <li>GYM & Yoga</li>
+        </ul>
+      </div>
+
+      <div class="box" id="relatedroom">
+        <h3>Our Rooms</h3>
+        <div class="sidebar-rooms">
+          <a class="sidebar-room-link" href="room-detail.html?room=101">
+            <img src="images/room/101/1.jpeg" alt="Family Room" />
+            <span>Family Room</span>
+          </a>
+          <a class="sidebar-room-link" href="room-detail.html?room=102">
+            <img src="images/room/102/1.jpeg" alt="Comfort Single Room" />
+            <span>Comfort Single Room</span>
+          </a>
+          <a class="sidebar-room-link" href="room-detail.html?room=103">
+            <img src="images/room/103/8.jpeg" alt="Deluxe Family Room" />
+            <span>Deluxe Family Room</span>
+          </a>
+          <a class="sidebar-room-link" href="room-detail.html?room=104">
+            <img src="images/room/104/1.jpeg" alt="Premium Family Room" />
+            <span>Premium Family Room</span>
+          </a>
+          <a class="sidebar-room-link" href="room-detail.html?room=201">
+            <img src="images/room/201/1.jpeg" alt="Classic Single Room" />
+            <span>Classic Single Room</span>
+          </a>
+          <a class="sidebar-room-link" href="room-detail.html?room=202">
+            <img src="images/room/202/1.jpeg" alt="Comfort Double Bedroom" />
+            <span>Comfort Double Bedroom</span>
+          </a>
+
+
+        </div>
+      </div>
+    </aside>
+  </div>
+
+
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/main logo.png" alt="Hummingbirds Logo" />
+      </div>
+      <div class="footer-about">
+        <h2>ABOUT US</h2>
+        <p>
+          Welcome to Humming Birds Resort, a haven of comfort and culinary excellence <br>
+          situated in the heart of Jaffna, Sri Lanka. Embrace the essence <br>
+          of warm hospitality and savor exquisite culinary delights in a picturesque setting.
+        </p>
+        <div class="footer-social">
+          <span class="footer-icon"><i class="fab fa-whatsapp"></i></span>
+          <span class="footer-icon"><i class="fab fa-facebook-messenger"></i></span>
+          <span class="footer-icon"><i class="fas fa-envelope"></i></span>
+        </div>
+      </div>
+      <div class="footer-links-section">
+        <div class="footer-links-group">
+            <h3>Features</h3>
+            <ul>
+                <li>Free High-Speed Wi-Fi</li>
+                <li>24/7 Front Desk Support</li>
+                <li>Daily Housekeeping</li>
+                <li>TV & AC facilities</li>
+                <li>Laundry Service</li>
+                <li>WhatsApp Booking Button</li>
+                <li>Photo Gallery</li>
+            </ul>
+        </div>
+        <div class="footer-links-group">
+            <h3>Quick Link</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> 
+      <span class="brand">HummingBirds.lk</span> All Rights Reserved | 
+      <a href="https://webbuilders.lk" target="_blank" rel="noopener noreferrer" class="office">WEBbuilders.LK</a>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  
+  </footer>
+
+
+
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const room = params.get("room");
+
+    const rooms = {
+      "101": {
+        title: "Comfort Family Room (101)",
+        desc: "A spacious and luxurious room ideal for families with modern comforts.",
+        images: [
+          "images/room/101/1.jpeg",
+          "images/room/101/2.jpeg",
+          "images/room/101/3.jpeg",
+          "images/room/101/5.jpeg",
+          "images/room/101/7.jpeg",
+          "images/room/101/8.jpeg",
+          "images/room/101/9.jpeg",
+        ],
+        price: "$45/Night or day (AC Room)",
+        // Facilities-ஐ Object ஆக மாற்றியுள்ளேன்
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Living Area", icon: "fa-solid fa-couch" },
+          { name: "Television", icon: "fa-solid fa-tv" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+      "102": {
+        title: "Comfort Single Room (102)",
+        desc: "An elegant suite offering privacy, style, and a relaxing stay experience.",
+        images: [
+          "images/room/102/1.jpeg",
+          "images/room/102/2.jpeg",
+          "images/room/102/3.jpeg",
+          "images/room/102/4.jpeg",
+          "images/room/102/6.jpeg",
+          "images/room/102/7.jpeg",
+          "images/room/102/11.jpeg",
+        ],
+        price: "$20/Night or day (Non A/C Room)",
+        facilities: [
+          { name: "Bathroom", icon: "fa-solid fa-shower" },
+          { name: "Dining Area", icon: "fa-solid fa-chair" },
+          { name: "Balcony", icon: "fa-solid fa-cloud-sun" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+      "103": {
+        title: "Deluxe Family Room (103)",
+        desc: "A cozy and well-equipped room perfect for a peaceful stay.",
+        images: [
+          "images/room/103/1.jpeg",
+          "images/room/103/2.jpeg",
+          "images/room/103/3.jpeg",
+          "images/room/103/4.jpeg",
+          "images/room/103/5.jpeg",
+          "images/room/103/6.jpeg",
+          "images/room/103/7.jpeg",
+          "images/room/103/8.jpeg",
+
+        ],
+        price:"$40/Night or Day (AC Room)",
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Attached Bathroom", icon: "fa-solid fa-bath" },
+          { name: "Television", icon: "fa-solid fa-tv" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+      "104": {
+        title: "Premium Suite (Premium Family Room) (104)",
+        desc: "An elegant suite offering privacy, style, and a relaxing stay experience.",
+        images: [
+          "images/room/104/1.jpeg",
+          "images/room/104/2.jpeg",
+          "images/room/104/3.jpeg",
+          "images/room/104/8.jpeg",
+          "images/room/104/4.jpeg",
+          "images/room/104/7.jpeg",
+        ],
+        price: "$45/Night or Day (AC Room)",
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Dining Area", icon: "fa-solid fa-chair" },
+          { name: "Balcony", icon: "fa-solid fa-cloud-sun" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+      "201": {
+        title: "Classic Single Room (201)",
+        desc: "A cozy and well-equipped room perfect for a peaceful stay.",
+        images: [
+          "images/room/201/1.jpeg",
+          "images/room/201/2.jpeg",
+          "images/room/201/3.jpeg",
+          "images/room/201/4.jpeg",
+          "images/room/201/5.jpeg",
+        ],
+        price: "$32/Night or Day (A/C Room)",
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Attached Bathroom", icon: "fa-solid fa-bath" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+      "202": {
+        title: "Comfort Double Bedroom (202)",
+        desc: "An elegant suite offering privacy, style, and a relaxing stay experience.",
+        images: [
+          "images/room/202/1.jpeg",
+          "images/room/202/2.jpeg",
+          "images/room/202/3.jpeg",
+          "images/room/202/4.jpeg",
+        ],
+        price: "$35/Night or Day (A/C Room)",
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Dining Area", icon: "fa-solid fa-chair" },
+          { name: "Balcony", icon: "fa-solid fa-cloud-sun" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+
+      "203": {
+        title: "Classic Single Room (203)",
+        desc: "A cozy and well-equipped room perfect for a peaceful stay.",
+        images: [
+          "images/room/203/1.jpeg",
+          "images/room/203/2.jpeg",
+          "images/room/203/3.jpeg",
+          "images/room/203/4.jpeg",
+          "images/room/203/5.jpeg",
+        ],
+        price: "$55/Night or Day (A/C Room)",
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Attached Bathroom", icon: "fa-solid fa-bath" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+      "204": {
+        title: "Deluxe Double Bedroom (204)",
+        desc: "A spacious and luxurious room ideal for families with modern comforts.",
+        images: [
+          "images/room/204/1.jpeg",
+          "images/room/204/2.jpeg",
+          "images/room/204/3.jpeg",
+          "images/room/204/4.jpeg",
+        ],
+        price: "$40/Day or Night (A/C Room)",
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Dining Area", icon: "fa-solid fa-chair" },
+          { name: "Balcony", icon: "fa-solid fa-cloud-sun" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+      "205": {
+        title: "Comfort Single Bedroom (205)",
+        desc: "A cozy and well-equipped room perfect for a peaceful stay.",
+        images: [
+          "images/room/205/1.jpeg",
+          "images/room/205/2.jpeg",
+          "images/room/205/3.jpeg",
+          "images/room/205/4.jpeg",
+        ],
+        price: "$35/Day or Night (A/C Room)",
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Attached Bathroom", icon: "fa-solid fa-bath" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+      "206": {
+        title: "Deluxe Single Bedroom (206)",
+        desc: "A luxurious and spacious room ideal for families with modern comforts.",
+        images: [
+          "images/room/206/1.jpg",
+          "images/room/206/2.jpeg",
+          "images/room/206/3.jpeg",
+          "images/room/206/4.jpeg",
+          "images/room/206/15.jpeg",
+
+        ],
+        price: "$32/Day or Night (A/C Room)",
+        facilities: [
+          { name: "Air Conditioning", icon: "fa-solid fa-snowflake" },
+          { name: "Dining Area", icon: "fa-solid fa-chair" },
+          { name: "Balcony", icon: "fa-solid fa-cloud-sun" },
+          { name: "Free WiFi", icon: "fa-solid fa-wifi" }
+        ]
+      },
+    };
+
+    if (rooms[room]) {
+      document.getElementById("roomTitle").innerText = rooms[room].title;
+      document.getElementById("roomDesc").innerText = rooms[room].desc;
+      // Main carousel image
+      if (rooms[room].images && rooms[room].images[0]) {
+        document.getElementById("roomImage").src = rooms[room].images[0];
+      }
+      document.getElementById("roomPrice").innerText = rooms[room].price;
+
+      // Related images below Book Now button
+      const relImgs = rooms[room].images;
+      const relImagesDiv = document.querySelector('.rel-images');
+      relImagesDiv.innerHTML = '';
+      relImgs.forEach((src, i) => {
+        const img = document.createElement('img');
+        img.className = 'rel-img';
+        img.src = src;
+        img.alt = rooms[room].title + ' image ' + (i + 1);
+        relImagesDiv.appendChild(img);
+      });
+
+      const facilityList = document.getElementById("roomFacilities");
+      facilityList.innerHTML = ""; // பழைய list-ஐ clear செய்கிறோம்
+
+      // Loop-ஐ மாற்றியுள்ளோம்
+      rooms[room].facilities.forEach(item => {
+        const li = document.createElement("li");
+        // Icon மற்றும் Text இரண்டையும் HTML ஆக சேர்க்கிறோம்
+        li.innerHTML = `<i class="${item.icon}"></i> <span>${item.name}</span>`;
+        facilityList.appendChild(li);
+      });
+
+      // WhatsApp Link Logic
+      const message = `Hello, I want to book the ${rooms[room].title}`;
+      document.getElementById("bookNowBtn").href =
+        "#" + encodeURIComponent(message);
+
+    } else {
+      document.getElementById("roomTitle").innerText = "Room Not Found";
+      // Room இல்லை என்றால் மற்றவற்றை மறைக்கலாம் (Optional)
+      document.getElementById("roomFacilities").innerHTML = "";
+      document.getElementById("bookNowBtn").style.display = "none";
+    }
+
+    let currentImageIndex = 0;
+    let roomImages = []; // இதில்தான் படங்கள் தற்காலிகமாக சேமிக்கப்படும்
+
+    if (rooms[room]) {
+      // ... மற்ற Code-கள் (Title, Desc போன்றவை)
+
+      roomImages = rooms[room].images; // Array-ஐ எடுக்கிறோம்
+      showImage(0); // முதல் படத்தை காட்டுகிறோம்
+    }
+
+    // படத்தை மாற்றும் Function
+    function showImage(index) {
+      const imgElement = document.getElementById("roomImage");
+      imgElement.src = roomImages[index];
+    }
+
+    function changeImage(step) {
+      currentImageIndex += step;
+
+      // படங்கள் முடிந்ததும் மீண்டும் முதலுக்கு வர அல்லது கடைசிக்குச் செல்ல
+      if (currentImageIndex >= roomImages.length) {
+        currentImageIndex = 0;
+      }
+      if (currentImageIndex < 0) {
+        currentImageIndex = roomImages.length - 1;
+      }
+
+      showImage(currentImageIndex);
+    }
+
+    // ஒவ்வொரு 3 வினாடிக்கும் படம் மாறும்
+    setInterval(() => {
+      changeImage(1);
+    }, 3000);
+
+
+    function openPopup() {
+      document.getElementById("bookingPopup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("bookingPopup").style.display = "none";
+    }
+
+    function sendToWhatsApp() {
+      const checkin = document.getElementById("checkin").value;
+      const checkout = document.getElementById("checkout").value;
+
+      if (!checkin || !checkout) {
+        alert("Please select both dates");
+        return;
+      }
+
+      const message =
+        `Hello, I want to book the ${rooms[room].title}
+Check-in: ${checkin}
+Check-out: ${checkout}`;
+
+      window.open(
+        "https://wa.me/94778149517?text=" + encodeURIComponent(message),
+        "_blank"
+      );
+
+      closePopup();
+    }
+
+
+
+  </script>
+
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+/* Page Header reuse */
+.page-header {
+    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url('../images/photo/1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    color: var(--white);
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.breadcrumb-item {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "/";
+    padding: 0 10px;
+    color: var(--primary);
+}
+
+.breadcrumb-item a {
+    color: var(--primary);
+}
+
+.breadcrumb-item.active {
+    color: var(--white);
+}
+
+/* Rooms Grid */
+.rooms-section {
+    padding: 50px 0;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 991px) {
+    .room-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.room-item {
+    background: var(--white);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    transition: .5s;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.room-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.room-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.room-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.room-item:hover .room-img img {
+    transform: scale(1.1);
+}
+
+.room-price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--primary);
+    color: var(--white);
+    padding: 5px 15px;
+    font-weight: 600;
+}
+
+.room-content {
+    padding: 25px;
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.room-header h5 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.rating i {
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+
+.room-facilities {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.facility {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.room-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-book-now {
+    display: block;
+    width: 100%;
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(185, 141, 88, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.btn-book-now::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-book-now:hover::before {
+    left: 100%;
+}
+
+.btn-book-now:hover {
+    background: #a67a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(185, 141, 88, 0.4);
+}
+
+.btn-book-now:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(185, 141, 88, 0.3);
+}
+
+/* Pagination */
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.pagination {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pagination-btn {
+    min-width: 45px;
+    height: 45px;
+    padding: 10px 15px;
+    background: var(--white);
+    border: 2px solid #ddd;
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.pagination-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 4px 10px rgba(185, 141, 88, 0.3);
+}
+
+/* Room items will be controlled by JavaScript pagination */
